@@ -1,4 +1,9 @@
-    
+
+    <!-- using-vega? https://github.com/vega/ -->
+    {{ if ($.Scratch.Get "using-vega") }}
+    <script src="{{ .Site.BaseURL }}/modules/vega/vega.js"></script>
+    {{ end  }}
+
     <!-- using-viz? https://github.com/mdaines/viz.js/ -->
     {{ if ($.Scratch.Get "using-viz") }}
     <script src="{{ .Site.BaseURL }}/modules/viz/viz.js"></script>
