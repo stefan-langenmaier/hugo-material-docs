@@ -4,6 +4,18 @@ A material design theme for [Hugo](https://gohugo.io).
 
 [![Screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-material-docs/master/static/images/screen.png)](https://digitalcraftsman.github.io/hugo-material-docs/)
 
+## Add as submodule
+
+Add to an existing repo as a submodule navigate to your themes directory and run:
+
+    git submodule add -- https://github.com/jshook/hugo-material-docs.git ./hugo-material-docs
+
+When your repo gets cloned the user must run:
+
+    git submodule update --init
+    git submodule sync
+
+
 ## Quick start
 
 Install with `git`:
