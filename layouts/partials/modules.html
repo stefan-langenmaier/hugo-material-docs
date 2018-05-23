@@ -40,6 +40,17 @@
 
     <!-- using-nomnoml? -->
     {{ if ($.Scratch.Get "using-nomnoml") }}
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/lodash.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/dagre.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.util.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.svg.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.vector.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.canvas.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.jison.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.parser.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.layouter.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.renderer.js"></script>
+    <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.js"></script>
     {{ end }}
     
     <!-- using-mathjax? -->
