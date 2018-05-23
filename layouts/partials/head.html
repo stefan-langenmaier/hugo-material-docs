@@ -78,8 +78,6 @@
     {{ end }}
 
   {{ partial "modules.html" . }}
-
-  {{ partial "annotatorjs2.html" . }}
-
+    
   </head>
   <body class="{{ with .Site.Params.palette.primary }}palette-primary-{{ . }}{{end }} {{ with .Site.Params.palette.accent }}palette-accent-{{ .  }}{{ end }}">
