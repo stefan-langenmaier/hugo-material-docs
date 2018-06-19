@@ -1,4 +1,11 @@
 
+    <!-- using-railroad? https://github.com/tabatkins/railroad-diagrams -->
+
+    {{ if ($.Scratch.Get "using-railroad") }}
+    <script src="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.js"></script>
+    <link href="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.css" rel="stylesheet">
+    {{ end  }}
+
     <!-- using-vega? https://github.com/vega/ -->
     {{ if ($.Scratch.Get "using-vega") }}
     <script src="{{ .Site.BaseURL }}/modules/vega/vega.js"></script>
