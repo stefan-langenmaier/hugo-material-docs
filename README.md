@@ -1,3 +1,11 @@
+# Notice:
+
+If you update to this version, you'll need to do the following:
+
+1. rename all 'index.md' to '_index.md'.
+2. rename all 'index.html' to '_index.html'.
+3. set the layout to 'single' in the header sections.
+
 # Material Docs
 
 A material design theme for [Hugo](https://gohugo.io).
