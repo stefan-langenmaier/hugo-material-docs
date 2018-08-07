@@ -1,10 +1,4 @@
 
-    <!-- using-railroad? https://github.com/tabatkins/railroad-diagrams -->
-
-    {{ if ($.Scratch.Get "using-railroad") }}
-    <script src="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.js"></script>
-    <link href="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.css" rel="stylesheet">
-    {{ end  }}
 
     <!-- using-vega? https://github.com/vega/ -->
     {{ if ($.Scratch.Get "using-vega") }}
@@ -23,7 +17,7 @@
     {{ end }}
 
     <!-- using-jssequence? https://github.com/bramp/js-sequence-diagrams -->
-    {{ if ($.Scratch.Get "using-jssequence") }}
+    {{ if ($.Scratch.Get "using-jssequence") | or true  }}
     <script src="{{ .Site.BaseURL }}/modules/jssequence/webfont.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/jssequence/snap.svg-min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/jssequence/underscore-min.js"></script>
@@ -31,22 +25,28 @@
     <link href="{{ .Site.BaseURL }}/modules/jssequence/sequence-diagram-min.css" rel="stylesheet" />
     {{ end }}
 
+    <!-- using-railroad? https://github.com/tabatkins/railroad-diagrams -->
+    {{ if ($.Scratch.Get "using-railroad") | or true }}
+    <script src="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.js"></script>
+    <link href="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.css" rel="stylesheet">
+    {{ end  }}
+
     <!-- using-jsxgraph? -->
-    {{ if ($.Scratch.Get "using-jsxgraph") }}
+    {{ if ($.Scratch.Get "using-jsxgraph") | or true }}
     <link href="{{ .Site.BaseURL }}/modules/jsxgraph/jsxgraph.css" type="text/css" rel="stylesheet"/>
     <script src="{{ .Site.BaseURL }}/modules/jsxgraph//jsxgraphcore.js"></script>
     <!-- using-jsxgraph on this page -->
     {{ end }}
 
     <!-- using-mermaidjs? -->
-    {{ if ($.Scratch.Get "using-mermaid") }}
+    {{ if ($.Scratch.Get "using-mermaid") | or true }}
     <link href="{{ .Site.BaseURL }}/modules/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
     <script src="{{ .Site.BaseURL }}/modules/mermaid/mermaid.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     {{ end }}
 
     <!-- using-nomnoml? -->
-    {{ if ($.Scratch.Get "using-nomnoml") }}
+    {{ if ($.Scratch.Get "using-nomnoml") | or true }}
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/lodash.min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/dagre.min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.util.js"></script>
@@ -59,7 +59,7 @@
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.renderer.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.js"></script>
     {{ end }}
-    
+
     <!-- using-mathjax? -->
     {{ if ($.Scratch.Get "using-mathjax") }}
     {{ end }}

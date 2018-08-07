@@ -7,7 +7,10 @@
 	{{ $currentMenuEntry.Name }}
 </a>
 
+{{ if $currentMenuEntry.HasChildren }}
+{{ else }}
 {{ if $isCurrent }}
 <ul id="scrollspy">
 </ul>
+{{ end }}
 {{ end }}
