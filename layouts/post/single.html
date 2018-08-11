@@ -1,5 +1,10 @@
 {{ partial "head" . }}
 
+{{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
+	{{ $repo_id := replace .Site.Params.repo_url "https://github.com/" ""}}
+	{{ .Scratch.Set "repo_id" $repo_id }}
+{{ end }}
+
 <div class="backdrop">
 	<div class="backdrop-paper"></div>
 </div>
@@ -19,19 +24,10 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Posts in {{ .Title }}</h1>
-
-			{{ range .Data.Pages.ByDate.Reverse }}
-			<a href="{{ .Permalink }}" title="{{ .Title }}">
-				<h2>{{ .Title }}</h2>
-			</a>
+			<h2>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h2>
 			<h3>{{ .Date.Format "2006-01-02" }}</h3>
 
-			<br>
-			{{ printf "%s" .Summary | markdownify }}
-
-			<hr>
-			{{ end }}
+			{{ .Content }}
 
 			<aside class="copyright" role="note">
 				{{ with .Site.Params.copyright }}
@@ -42,6 +38,10 @@
 				using the
 				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
 			</aside>
+
+			<footer class="footer">
+				{{ partial "footer" . }}
+			</footer>
 		</div>
 	</article>
 
