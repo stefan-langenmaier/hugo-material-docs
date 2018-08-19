@@ -54,6 +54,20 @@ A big thank you to [Martin Donath](https://github.com/squidfunk). He created the
 
 Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hugo and the [awesome community](https://github.com/spf13/hugo/graphs/contributors) around the project.
 
+
+## Features
+
+### Font Selection
+If you don't want to use the standard font "Roboto (Mono)", you can select
+fonts from google:
+```
+[params]
+[params.font]
+  code = "Noto Serif"
+  text = "Noto Sans"
+```
+(insert that code in config.toml)
+
 ## License
 
 The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
