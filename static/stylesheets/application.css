@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(/fonts/Roboto.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(/fonts/Roboto_Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(/fonts/Roboto_Mono.ttf) format('truetype');
+}
 html {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -189,7 +207,7 @@ pre code {
   color: #9575cd;
 }
 .icon {
-  font-family: Icon;
+  font-family: "Font Awesome 5 Free";
   speak: none;
   font-style: normal;
   font-weight: 400;
@@ -422,7 +440,7 @@ input {
 .no-fontface input,
 body,
 input {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .no-fontface code,
 .no-fontface kbd,
@@ -430,7 +448,7 @@ input {
 code,
 kbd,
 pre {
-  font-family: Courier New, Courier, monospace;
+  font-family: 'Roboto Mono', Courier New, Courier, monospace;
 }
 #toggle-drawer:checked ~ .main .drawer,
 .toggle-drawer .drawer {
@@ -705,8 +723,12 @@ pre span {
   color: hsla(0, 0%, 100%, 0.7);
 }
 .admonition {
-  background: #29b6f6;
+  background: rgba(0, 0, 0, 0.54);
   color: #fff;
+}
+.admonition a  {
+  background: rgba(255, 255, 255);
+  padding: 2px 2px 0px;
 }
 .admonition pre {
   background: hsla(0, 0%, 100%, 0.3);
@@ -796,14 +818,15 @@ h1 .article .headerlink {
   display: inline;
 }
 .article ul > li:before {
-  content: "\e602";
+  content: '\f054';
   display: block;
   float: left;
-  font-family: Icon;
+  font-family: "Font Awesome 5 Free";
   font-size: 16px;
   width: 1.2em;
   margin-left: -1.2em;
   vertical-align: -0.1em;
+  font-weight: 900;
 }
 .article p > code {
   white-space: nowrap;
@@ -934,16 +957,17 @@ h1 .article .headerlink {
   font-size: 20px;
 }
 .admonition .admonition-title:before {
-  content: "\e611";
+  content: "\f249";
   display: block;
   float: left;
-  font-family: Icon;
+  font-family: "Font Awesome 5 Free";
   font-size: 24px;
   vertical-align: -0.1em;
   margin-right: 5px;
+  font-weight: 900;
 }
 .admonition.warning .admonition-title:before {
-  content: "\e610";
+  content: "\f071";
 }
 .article h3 {
   font-weight: 700;
