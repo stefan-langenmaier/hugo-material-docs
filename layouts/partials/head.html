@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ "stylesheets/palettes.css" | relURL }}">
     <link rel="stylesheet" href="{{ "stylesheets/images.css" | relURL }}">
 
-    <link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | relURL }}{{ else }}{{ "stylesheets/highlight/highlight.css" | relURL }}{{ end }}">
+    <link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | relURL }}{{ else }}{{ "stylesheets/highlightjs/github.css" | relURL }}{{ end }}">
 
     {{/* set default values if no custom ones are defined */}}
     {{ $text := .Site.Params.font.text }}
