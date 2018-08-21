@@ -242,6 +242,15 @@ a {
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
 }
+button.btn {
+  display: inline-block;
+  padding: 0 6px 0 6px;
+  font-size: 12px;
+  height: 30px;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 700;
+}
 body {
   color: rgba(0, 0, 0, 0.87);
 }
@@ -467,7 +476,8 @@ pre {
   -webkit-transition: box-shadow 0.4s;
   transition: box-shadow 0.4s;
 }
-.repo a {
+.repo a,
+button.btn {
   -webkit-transition: box-shadow 0.4s, opacity 0.4s;
   transition: box-shadow 0.4s, opacity 0.4s;
 }
@@ -499,7 +509,9 @@ pre {
   border-radius: 3px;
 }
 .repo a:focus,
-.repo a:hover {
+.repo a:hover,
+button.btn:focus,
+button.btn:hover {
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
   opacity: 0.8;
 }

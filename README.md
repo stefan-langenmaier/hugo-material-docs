@@ -68,6 +68,12 @@ fonts from google:
 ```
 (insert that code in config.toml)
 
+### Buttons
+Use buttons with icons in your text text:
+```
+{{% button href="/test" icon="fab fa-github" icon-position="right" %}}text and icon after text{{% /button %}}
+```
+
 ## License
 
 The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
