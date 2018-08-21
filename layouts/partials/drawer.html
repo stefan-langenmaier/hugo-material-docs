@@ -44,13 +44,13 @@
 
         {{ if isset .Site.Params "author" }}
         <hr>
-        <span class="section">The author</span>
-        
+        <span class="section">Contact</span>
+
         <ul>
-          {{ with .Site.Social.twitter }}
+          {{ with .Site.Social.email }}
           <li>
-            <a href="https://twitter.com/{{ . }}" target="_blank" title="@{{ . }} on Twitter">
-              @{{ . }} on Twitter
+            <a href="mailto:{{ . }}" title="Email of {{ . }}">
+              Contact via email
             </a>
           </li>
           {{ end }}
@@ -63,13 +63,38 @@
           </li>
           {{ end }}
 
-          {{ with .Site.Social.email }}
+          {{ with .Site.Social.mailinglist }}
           <li>
-            <a href="mailto:{{ . }}" title="Email of {{ . }}">
-              Contact via email
+            <a href="{{ . }}" title="Subscribe to the mailing list">
+              Subscribe to the mailing list
             </a>
           </li>
           {{ end }}
+
+          {{ with .Site.Social.irc }}
+          <li>
+              <a href="irc://{{ . }}" target="_blank" title="irc://{{ . }} on IRC">
+              Channel on IRC
+            </a>
+          </li>
+          {{ end }}
+
+          {{ with .Site.Social.twitter }}
+          <li>
+            <a href="https://twitter.com/{{ . }}" target="_blank" title="@{{ . }} on Twitter">
+              @{{ . }} on Twitter
+            </a>
+          </li>
+          {{ end }}
+
+          {{ with .Site.Social.matrix }}
+          <li>
+              <a href="{{ . }}" target="_blank" title="Room on Matrix">
+              Room on Matrix
+            </a>
+          </li>
+          {{ end }}
+
         </ul>
         {{ end }}
       </div>

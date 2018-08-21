@@ -11,10 +11,20 @@
       </div>
     </div>
 
-    {{ with .Site.Social.twitter }}
-    <div class="button" role="button" aria-label="Twitter">
-      <a href="https://twitter.com/{{ . }}" title="@{{ . }} on Twitter" target="_blank" class="toggle-button">
-        <label class="toggle-button icon fab fa-twitter">
+    {{ with .Site.Social.matrix }}
+    <div class="button" role="button" aria-label="matrix">
+        <a href="{{ . }}" title="Room on Matrix" target="_blank" class="toggle-button">
+        <label class="toggle-button icon fas fa-users">
+          <span></span>
+        </label>
+      </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Social.irc }}
+    <div class="button" role="button" aria-label="IRC">
+        <a href="irc://{{ . }}" title="Channel on IRC" target="_blank" class="toggle-button">
+        <label class="toggle-button icon fas fa-hashtag">
           <span></span>
         </label>
       </a>
@@ -25,6 +35,16 @@
     <div class="button" role="button" aria-label="GitHub">
       <a href="https://github.com/{{ . }}" title="@{{ . }} on GitHub" target="_blank" class="toggle-button">
         <label class="toggle-button icon fab fa-github">
+          <span></span>
+        </label>
+      </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Social.twitter }}
+    <div class="button" role="button" aria-label="Twitter">
+      <a href="https://twitter.com/{{ . }}" title="@{{ . }} on Twitter" target="_blank" class="toggle-button">
+        <label class="toggle-button icon fab fa-twitter">
           <span></span>
         </label>
       </a>

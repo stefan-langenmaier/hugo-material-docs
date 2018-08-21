@@ -74,6 +74,15 @@ Use buttons with icons in your text text:
 {{% button href="/test" icon="fab fa-github" icon-position="right" %}}text and icon after text{{% /button %}}
 ```
 
+### Social Links
+We added support for matrix, irc and mailing list links:
+```
+[social]
+    matrix = "<link to matrix channel, accessable via webpage (like matrix.org provides)>"
+    irc = "<url that would follow after 'irc://'>"
+    mailinglist = "<link to subscription interface>"
+```
+
 ## License
 
 The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
