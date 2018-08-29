@@ -39,7 +39,7 @@
     {{ end }}
 
     <!-- using-mermaidjs? -->
-    {{ if ($.Scratch.Get "using-mermaid") | or true }}
+    {{ if ($.Scratch.Get "using-mermaid") }}
     <link href="{{ .Site.BaseURL }}/modules/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
     <script src="{{ .Site.BaseURL }}/modules/mermaid/mermaid.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
