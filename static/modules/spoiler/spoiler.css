@@ -1,0 +1,19 @@
+.spoiler {
+  opacity: 0;
+  height: 0;
+}
+
+.spoiler li {
+  margin-top: 0em;
+}
+
+.spoiler.revealed {
+  opacity: 1;
+  height: auto;
+  transition: opacity 1s linear;
+  margin-bottom: 10px;
+}
+
+button.reveal {
+  margin-bottom: 16px;
+}

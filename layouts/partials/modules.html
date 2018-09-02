@@ -67,3 +67,8 @@
     <!-- using-cytoscape? -->
     {{ if ($.Scratch.Get "using-cytoscape") }}
     {{ end }}
+
+    {{ if ($.Scratch.Get "using-spoiler") | or true }}
+    <script src="{{ .Site.BaseURL }}/modules/spoiler/spoiler.js" defer></script>
+    <link href="{{ .Site.BaseURL }}/modules/spoiler/spoiler.css" type="text/css" rel="stylesheet">
+    {{ end }}

@@ -83,6 +83,20 @@ We added support for matrix, irc and mailing list links:
     mailinglist = "<link to subscription interface>"
 ```
 
+### Spoiler
+Put a spoiler in your page:
+```
+{{< spoiler "Button Text Here" >}}
+Your spoiler text her
+{{< /spoiler >}}
+```
+or with a seperate hide button text:
+```
+{{< spoiler "show spoiler" "hide spoiler" >}}
+Your spoiler text her
+{{< /spoiler >}}
+```
+
 ## License
 
 The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
