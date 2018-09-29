@@ -57,6 +57,33 @@ Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hug
 
 ## Features
 
+### Download-Links / Stars (GitHub)
+
+One of the main features of this template is showing a link to the GitHub repo and a download button / star count for the repo on the left. You can also activate a custom download url, if this works better for you.
+
+#### Warning
+Only GitHub-Download or Custom-Download URL can be used!
+Either set use_github_download to true or provide a url in custom_download_url
+
+#### GitHub-Star Count
+
+```
+use_github_star = "true"
+repo_url = "https://github.com/gohugoio/hugo"
+```
+
+#### GitHub-Download URL
+
+```
+use_github_download = "true"
+repo_url = "https://github.com/gohugoio/hugo"
+```
+
+#### Custom-Download URL
+```
+custom_download_url = "https://gohugo.io/getting-started/installing"
+```
+
 ### Font Selection
 If you don't want to use the standard font "Roboto (Mono)", you can select
 fonts from google:

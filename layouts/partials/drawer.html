@@ -1,3 +1,7 @@
+{{ if (isset .Site.Params "repo_url") | and ((eq .Site.Params.use_github_download "true" ) | or (eq .Site.Params.use_github_star "true" ))}}
+	{{ $repo_id := replace .Site.Params.repo_url "https://github.com/" ""}}
+	{{ .Scratch.Set "repo_id" $repo_id }}
+{{ end }}
 <nav aria-label="Navigation">
   <a href="{{ with .Site.Params.repo_url }}{{ . }}{{ else }}{{ .Site.BaseURL }}{{ end }}" class="project">
     <div class="banner">
@@ -18,22 +22,36 @@
 
   <div class="scrollable">
     <div class="wrapper">
-      {{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
-        <ul class="repo">
-          <li class="repo-download">
-            <a href="{{ .Site.Params.repo_url }}/archive/master.zip" target="_blank" title="Download" data-action="download">
-              <i class="fa fa-download"></i> Download
-            </a>
-          </li>
+    {{ if ( (eq .Site.Params.use_github_download "true" ) | and (isset .Site.Params "repo_url")) | or ((eq  .Site.Params.use_github_star "true" ) | and (isset .Site.Params "repo_url")) | or (isset .Site.Params "custom_download_url") }}
+      {{/* does any of the following ifs work? */}}
+      <ul class="repo">
+      {{ if (eq  .Site.Params.use_github_download "true" ) | and (isset .Site.Params "repo_url") }}
+        {{/* download via github master.zip */}}
+        <li class="repo-download">
+          <a href="{{ .Site.Params.repo_url }}/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <i class="fa fa-download"></i> Download
+          </a>
+        </li>
+      {{ else if (isset .Site.Params "custom_download_url") }}
+        {{/* download via custom_download_link */}}
+        <li class="repo-download">
+          <a href="{{ .Site.Params.custom_download_url }}" target="_blank" title="Download" data-action="download">
+            <i class="fa fa-download"></i> Download
+          </a>
+        </li>
+      {{ end }}
+      {{ if (eq  .Site.Params.use_github_star "true" ) | and (isset .Site.Params "repo_url") }}
+        {{/* show stars from github */}}
           <li class="repo-stars">
             <a href="{{ .Site.Params.repo_url }}/stargazers" target="_blank" title="Stargazers" data-action="star">
               <i class="fa fa-star"></i> Stars
               <span class="count">&ndash;</span>
             </a>
           </li>
-        </ul>
-        <hr>
       {{ end }}
+      </ul>
+      <hr>
+    {{ end }}
 
       <div class="toc">
         {{ if gt (len .Site.Menus.main) 0 }}
