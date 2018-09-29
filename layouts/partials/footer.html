@@ -1,9 +1,9 @@
 {{ if .IsPage }}
-{{ if .PrevPageInSection | or .NextPageInSection }}
+{{ if .PrevInSection | or .NextInSection }}
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
-  {{ if .PrevPageInSection }}
-      <a href="{{ .PrevPageInSection.Permalink }}" title="{{ .PrevPageInSection.Title }}">
+  {{ if .PrevInSection }}
+      <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">
         <span class="direction">
           Previous
         </span>
@@ -13,7 +13,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              {{ .PrevPageInSection.Title }}
+              {{ .PrevInSection.Title }}
             </div>
           </div>
         </div>
@@ -22,15 +22,15 @@
   </div>
 
   <div class="next">
-  {{ if .NextPageInSection }}
-      <a href="{{ .NextPageInSection.Permalink }}" title="{{ .NextPageInSection.Title }}">
+  {{ if .NextInSection }}
+      <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              {{ .NextPageInSection.Title }}
+              {{ .NextInSection.Title }}
             </div>
           </div>
           <div class="button" role="button" aria-label="Next">
