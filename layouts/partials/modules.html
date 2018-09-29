@@ -1,23 +1,23 @@
 
 
     <!-- using-vega? https://github.com/vega/ -->
-    {{ if ($.Scratch.Get "using-vega") }}
+    {{ if ($.HasShortcode "vega") }}
     <script src="{{ .Site.BaseURL }}/modules/vega/vega.js"></script>
     {{ end  }}
 
     <!-- using-viz? https://github.com/mdaines/viz.js/ -->
-    {{ if ($.Scratch.Get "using-viz") }}
+    {{ if ($.HasShortcode "viz") }}
     <script src="{{ .Site.BaseURL }}/modules/viz/viz.js"></script>
     {{ end }}
 
     <!-- using-flowchart? https://github.com/adrai/flowchart.js -->
-    {{ if ($.Scratch.Get "using-flowchart") }}
+    {{ if ($.HasShortcode "flowchart") }}
     <script src="{{ .Site.BaseURL }}/modules/flowchart/raphael.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/flowchart/flowchart-latest.js"></script>
     {{ end }}
 
     <!-- using-jssequence? https://github.com/bramp/js-sequence-diagrams -->
-    {{ if ($.Scratch.Get "using-jssequence") | or true  }}
+    {{ if ($.HasShortcode "jssequence") }}
     <script src="{{ .Site.BaseURL }}/modules/jssequence/webfont.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/jssequence/snap.svg-min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/jssequence/underscore-min.js"></script>
@@ -26,27 +26,27 @@
     {{ end }}
 
     <!-- using-railroad? https://github.com/tabatkins/railroad-diagrams -->
-    {{ if ($.Scratch.Get "using-railroad") | or true }}
+    {{ if ($.HasShortcode "railroad") | or ($.HasShortcode "rr") }}
     <script src="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.js"></script>
     <link href="{{ .Site.BaseURL }}/modules/railroad/railroad-diagrams.css" rel="stylesheet">
     {{ end  }}
 
     <!-- using-jsxgraph? -->
-    {{ if ($.Scratch.Get "using-jsxgraph") | or true }}
+    {{ if ($.HasShortcode "jsxgraph") }}
     <link href="{{ .Site.BaseURL }}/modules/jsxgraph/jsxgraph.css" type="text/css" rel="stylesheet"/>
     <script src="{{ .Site.BaseURL }}/modules/jsxgraph//jsxgraphcore.js"></script>
     <!-- using-jsxgraph on this page -->
     {{ end }}
 
     <!-- using-mermaidjs? -->
-    {{ if ($.Scratch.Get "using-mermaid") }}
+    {{ if ($.HasShortcode "mermaid") }}
     <link href="{{ .Site.BaseURL }}/modules/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
     <script src="{{ .Site.BaseURL }}/modules/mermaid/mermaid.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     {{ end }}
 
     <!-- using-nomnoml? -->
-    {{ if ($.Scratch.Get "using-nomnoml") | or true }}
+    {{ if ($.HasShortcode "nomnoml") }}
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/lodash.min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/dagre.min.js"></script>
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/skanaar.util.js"></script>
@@ -60,15 +60,7 @@
     <script src="{{ .Site.BaseURL }}/modules/nomnoml/nomnoml.js"></script>
     {{ end }}
 
-    <!-- using-mathjax? -->
-    {{ if ($.Scratch.Get "using-mathjax") }}
-    {{ end }}
-
-    <!-- using-cytoscape? -->
-    {{ if ($.Scratch.Get "using-cytoscape") }}
-    {{ end }}
-
-    {{ if ($.Scratch.Get "using-spoiler") | or true }}
+    {{ if ($.HasShortcode "spoiler")  }}
     <script src="{{ .Site.BaseURL }}/modules/spoiler/spoiler.js" defer></script>
     <link href="{{ .Site.BaseURL }}/modules/spoiler/spoiler.css" type="text/css" rel="stylesheet">
     {{ end }}

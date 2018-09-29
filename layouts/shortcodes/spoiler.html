@@ -1,4 +1,3 @@
-{{ $.Page.Scratch.Set "using-spoiler" "true" }}
 {{ $show := .Get 0 }}
 {{ $hide := .Get 1 }}
 <button class="reveal btn btn-default" {{ if $hide }} onclick="change_spoiler(this, {{ $show }}, {{ $hide }})"{{ end }}>{{ $show }}</button>
