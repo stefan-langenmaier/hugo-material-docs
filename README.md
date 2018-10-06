@@ -84,6 +84,11 @@ repo_url = "https://github.com/gohugoio/hugo"
 custom_download_url = "https://gohugo.io/getting-started/installing"
 ```
 
+### Build Date
+
+If you want to add a build date to each page, simply specify the variable `build_date_format` in your config.   
+[How to format date in hugo](https://gohugo.io/functions/format#go-s-layout-string)
+
 ### Font Selection
 If you don't want to use the standard font "Roboto (Mono)", you can select
 fonts from google:

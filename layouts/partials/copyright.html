@@ -4,6 +4,9 @@
 	{{ end }}
 	Documentation built with
 	<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+	{{ with .Site.Params.build_date_format  }}
+	: {{ now.Format . }}
+	{{ end }}
 	using the
 	<a href="https://github.com/DerUser/hugo-material-docs" target="_blank">Material</a> theme.
 </aside>
