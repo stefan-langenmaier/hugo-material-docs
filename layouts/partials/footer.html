@@ -5,11 +5,14 @@
   {{ if .PrevInSection }}
       <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">
         <span class="direction">
-          Previous
+          Vorherige
         </span>
         <div class="page">
           <div class="button" role="button" aria-label="Previous">
+            <!--
             <i class="icon fas fa-chevron-left"></i>
+            -->
+            <i class="icon">&lt;</i>
           </div>
           <div class="stretch">
             <div class="title">
@@ -25,7 +28,7 @@
   {{ if .NextInSection }}
       <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
         <span class="direction">
-          Next
+          Nächste
         </span>
         <div class="page">
           <div class="stretch">
@@ -34,7 +37,10 @@
             </div>
           </div>
           <div class="button" role="button" aria-label="Next">
+          <!--
             <i class="icon fas fa-chevron-right"></i>
+          -->
+            <i class="icon">&gt;</i>
           </div>
         </div>
       </a>

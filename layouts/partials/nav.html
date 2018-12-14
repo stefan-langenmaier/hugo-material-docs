@@ -6,12 +6,14 @@
 <li>
   {{ if .HasChildren }}
     {{ partial "nav_link" $currentNode }}
+    {{ if or ($currentNode.HasMenuCurrent "main" .) ($currentNode.IsMenuCurrent "main" .) }}
     <ul>
       {{ range .Children }}
         {{ $.Scratch.Set "currentMenuEntry" . }}
         {{ partial "nav_link" $currentNode }}
       {{ end }}
     </ul>
+    {{ end }}
   {{ else }}
     {{ partial "nav_link" $currentNode }}
   {{ end }}

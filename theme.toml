@@ -1,13 +1,17 @@
-name = "Material Docs"
+name = "Theme - VfL Zusamaltheim"
 license = "MIT"
-licenselink = "https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md"
-description = "A material design theme for documentations."
-homepage = "https://github.com/digitalcraftsman/hugo-material-docs"
+licenselink = "https://github.com/stefan-langenmaier/hugo-theme-vflzusamaltheim/blob/master/LICENSE.md"
+description = "Theme for the website of the VfL Zusamaltheim based on a material design theme for documentations."
+homepage = "https://github.com/stefan-langenmaier/hugo-theme-vflzusamaltheim"
 tags = ["material", "documentation", "docs", "google analytics", "responsive"]
 features = []
 min_version = 0.20
 
 [author]
+  name = "Stefan Langenmaier"
+  homepage = "https://github.com/stefan-langenmaier"
+
+[forked_from]
   name = "Digitalcraftsman"
   homepage = "https://github.com/digitalcraftsman"
 
