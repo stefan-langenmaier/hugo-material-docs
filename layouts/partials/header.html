@@ -6,9 +6,18 @@
       </label>
     </div>
     <div class="stretch">
-      <div class="title">
-        {{ .Title }}
-      </div>
+        <a href="{{ .Site.BaseURL }}" class="project">
+            <div class="banner">
+              {{ with .Site.Params.logo }}
+                <div class="logo">
+                  <img src="{{ $.Site.BaseURL }}{{ . }}">
+                </div>
+              {{ end }}
+              <div class="name">
+                {{ .Site.Title }}
+              </div>
+            </div>
+        </a>
     </div>
 
     {{ with .Site.Social.matrix }}
@@ -38,6 +47,29 @@
           <span></span>
         </label>
       </a>
+    {{ end }}
+
+    {{ with .Site.Social.twitter }}
+    <div class="button button-twitter" role="button" aria-label="Twitter">
+       <a href="https://twitter.com/{{ . }}" title="@{{ . }} auf Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Social.facebook }}
+    <div class="button button-facebook" role="button" aria-label="Facebook">
+      <a href="https://facebook.com/{{ . }}" title="@{{ . }} auf Facebook" target="_blank" class="toggle-button icon icon-facebook"></a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Social.fupa }}
+    <div class="button button-fupa" role="button" aria-label="Fupa">
+      <a href="https://fupa.de/{{ . }}" title="@{{ . }} auf Fupa" target="_blank" class="toggle-button icon icon-fupa"></a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Social.bfv }}
+    <div class="button button-bfv" role="button" aria-label="BFV">
+      <a href="https://bfv.de/{{ . }}" title="@{{ . }} auf BFV" target="_blank" class="toggle-button icon icon-bfv"></a>
     </div>
     {{ end }}
 
@@ -60,6 +92,7 @@
     </div>
     -->
   </div>
+  <!-- TODO: disabled until Hugo supports the generation of a content index
   <div class="bar search">
     <div class="button" role="button" aria-label="Close">
       <label class="toggle-button icon fas fa-chevron-left" for="toggle-search"></label>
@@ -73,4 +106,5 @@
       <button class="toggle-button icon fas fa-times" id="reset-search"></button>
     </div>
   </div>
+  -->
 </nav>
